@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.05149f69.chunk.css",
+    "main.js": "/static/js/main.7f27a190.chunk.js",
+    "main.js.map": "/static/js/main.7f27a190.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.900dd88b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.900dd88b.js.map",
+    "static/css/2.ffda3d49.chunk.css": "/static/css/2.ffda3d49.chunk.css",
+    "static/js/2.a28ad6ad.chunk.js": "/static/js/2.a28ad6ad.chunk.js",
+    "static/js/2.a28ad6ad.chunk.js.map": "/static/js/2.a28ad6ad.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ffda3d49.chunk.css.map": "/static/css/2.ffda3d49.chunk.css.map",
+    "static/css/main.05149f69.chunk.css.map": "/static/css/main.05149f69.chunk.css.map",
+    "static/js/2.a28ad6ad.chunk.js.LICENSE.txt": "/static/js/2.a28ad6ad.chunk.js.LICENSE.txt",
+    "static/js/main.7f27a190.chunk.js.LICENSE.txt": "/static/js/main.7f27a190.chunk.js.LICENSE.txt",
+    "static/media/profilepage.scss": "/static/media/vaporwave.9df5182f.ttf",
+    "static/media/Eric_Linkedin.4e5e2bfd.jpeg": "/static/media/Eric_Linkedin.4e5e2bfd.jpeg",
+    "static/media/Git.51f1c699.png": "/static/media/Git.51f1c699.png",
+    "static/media/Sami_Linkedin.95e3b3ef.jpeg": "/static/media/Sami_Linkedin.95e3b3ef.jpeg",
+    "static/media/color-logo.ab0ad17b.svg": "/static/media/color-logo.ab0ad17b.svg",
+    "static/media/edit-icon.2b0dffb3.svg": "/static/media/edit-icon.2b0dffb3.svg",
+    "static/media/link.293f3024.png": "/static/media/link.293f3024.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.900dd88b.js",
+    "static/css/2.ffda3d49.chunk.css",
+    "static/js/2.a28ad6ad.chunk.js",
+    "static/css/main.05149f69.chunk.css",
+    "static/js/main.7f27a190.chunk.js"
+  ]
+}
