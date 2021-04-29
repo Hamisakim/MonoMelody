@@ -6,8 +6,8 @@ import axios from 'axios'
 import Sequencer from '../sequencer/Sequencer'
 import SequencerPlayback from '../sequencer/SequencerPlayback'
 import LoopInfoCard from '../sequencer/LoopInfoCard'
-import CommentFeed from '../CommentParts/CommentFeed'
-import CommentForm from '../CommentParts/CommentForm'
+import CommentFeed from '../comment-parts/CommentFeed'
+import CommentForm from '../comment-parts/CommentForm'
 
 import ParticlesBg from '../particles/ParticlesBg'
 
@@ -33,7 +33,7 @@ const LoopShow = () => {
   useEffect(() => {
     const getLoopData = async () => {
       try {
-        const response = await axios.get(`/api/loops/${params.id}`)
+        const response = await axios.get(`/api/loops/${params.id}/`)
         // console.log('response.data ->', response.data)
         setLoop(response.data)
       } catch (err) {

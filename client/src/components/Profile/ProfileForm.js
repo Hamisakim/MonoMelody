@@ -32,7 +32,7 @@ const ProfileForm = () => {
     const payload = getPayloadFromToken()
     const userId = payload.sub
     const getUserData = async () => {
-      const response = await axios.get(`/api/auth/users/${userId}`)
+      const response = await axios.get(`/api/auth/users/${userId}/`)
       setUserId(userId)
       setUser(response.data)
       setFormData(response.data)

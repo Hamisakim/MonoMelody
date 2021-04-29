@@ -16,11 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.urls import path, include, re_path 
+from .views import index 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('jwt_auth.urls')),
     path('api/loops/', include('loops.urls')),
     path('api/comments/', include('comments.urls')),
     path('api/like/', include('likes.urls')),
-    path('api/genres/', include('genres.urls'))
+    path('api/genres/', include('genres.urls')),
+    re_path(r'^.*$', index)
 ]

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { getTokenFromLocalStorage,userIsAuthenticated } from '../../helpers/authHelp'
 import { commentPopup,  userNeedsToLogin,getErrorsToastify } from '../../helpers/popUps'
-import LikeButton from '../LikeButton/LikeButton'
+import LikeButton from '../likebutton/LikeButton'
 //* need to find way to prevent adding a comment from adding a rating too
 // ? comment clears field on submit
 

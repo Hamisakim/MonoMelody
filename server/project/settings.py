@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
-
+import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -57,11 +57,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'project.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '../client')
+                 ]  #Look, we have added the root folder of frontend here
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,6 +74,21 @@ TEMPLATES = [
         },
     },
 ]
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -144,3 +160,11 @@ REST_FRAMEWORK = {
         'jwt_auth.authentication.JWTAuthentication'
     ],
 }
+ROOT_URLCONF = 'project.urls' #check if you have this already, if not add it in
+
+STATIC_URL = '/static/' # same with this
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, '../client', "build", "static"),
+)
+django_on_heroku.settings(locals())
