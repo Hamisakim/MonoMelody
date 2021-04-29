@@ -1,0 +1,190 @@
+[
+{
+  "model": "loops.loop",
+  "pk": 13,
+  "fields": {
+    "title": "v nice",
+    "steps": "C3 G3 F3 Bb3 C4",
+    "bpm": 120,
+    "synth": "fmSynth",
+    "key": "c",
+    "scale": "mixolydian",
+    "effect": "bitCrusher",
+    "date_created": "2021-04-20T15:18:43.060Z",
+    "owner": 3,
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 14,
+  "fields": {
+    "title": "tasty",
+    "steps": "Eb3 D3 Eb3 D3 G3 G3 G3 A3",
+    "bpm": 120,
+    "synth": "membraneSynth",
+    "key": "d",
+    "scale": "phrygian",
+    "effect": "autoWah",
+    "date_created": "2021-04-20T15:55:02.148Z",
+    "owner": 3,
+    "genres": [
+      8,
+      3,
+      6
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 15,
+  "fields": {
+    "title": "yolo",
+    "steps": "F3 Bb3 G3 A3",
+    "bpm": 200,
+    "synth": "fmSynth",
+    "key": "d",
+    "scale": "phrygian",
+    "effect": "distortion",
+    "date_created": "2021-04-20T16:29:15.551Z",
+    "owner": 3,
+    "genres": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      14
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 16,
+  "fields": {
+    "title": "sauce",
+    "steps": "F3 Eb3 D3 C3 Bb3 A3",
+    "bpm": 120,
+    "synth": "fmSynth",
+    "key": "c",
+    "scale": "dorian",
+    "effect": "autoWah",
+    "date_created": "2021-04-21T10:49:21.011Z",
+    "owner": 2,
+    "genres": [
+      1
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 17,
+  "fields": {
+    "title": "bigmac",
+    "steps": "F3 Eb3 D3 C3 Bb3 A3",
+    "bpm": 120,
+    "synth": "fmSynth",
+    "key": "c",
+    "scale": "dorian",
+    "effect": "autoWah",
+    "date_created": "2021-04-21T10:49:31.860Z",
+    "owner": 1,
+    "genres": [
+      4
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 18,
+  "fields": {
+    "title": "catchy",
+    "steps": "C3 C3 C3 C3 C3 C3 G3 C4",
+    "bpm": 238,
+    "synth": "synth",
+    "key": "c",
+    "scale": "dorian",
+    "effect": "freeverb",
+    "date_created": "2021-04-21T12:08:25.648Z",
+    "owner": 5,
+    "genres": [
+      19
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 19,
+  "fields": {
+    "title": "doomwall",
+    "steps": "G3 C4",
+    "bpm": 120,
+    "synth": "synth",
+    "key": "d",
+    "scale": "dorian",
+    "effect": "autoWah freeverb feedbackDelay autoFilter distortion",
+    "date_created": "2021-04-21T12:36:27.418Z",
+    "owner": 5,
+    "genres": [
+      2
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 20,
+  "fields": {
+    "title": "fijilife",
+    "steps": "D3 F3 A3 G3 C4",
+    "bpm": 198,
+    "synth": "duoSynth",
+    "key": "d",
+    "scale": "dorian",
+    "effect": "distortion",
+    "date_created": "2021-04-21T15:38:40.698Z",
+    "owner": 6,
+    "genres": [
+      19
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 21,
+  "fields": {
+    "title": "glitch",
+    "steps": "D3 F3 Eb3 A3 G3 Bb3",
+    "bpm": 152,
+    "synth": "synth",
+    "key": "d",
+    "scale": "phrygian",
+    "effect": "autoWah distortion feedbackDelay",
+    "date_created": "2021-04-21T19:08:45.478Z",
+    "owner": 4,
+    "genres": [
+      5
+    ]
+  }
+},
+{
+  "model": "loops.loop",
+  "pk": 24,
+  "fields": {
+    "title": "billyBon",
+    "steps": "D3 Eb3 F3 G3",
+    "bpm": 120,
+    "synth": "synth",
+    "key": "d",
+    "scale": "phrygian",
+    "effect": "distortion",
+    "date_created": "2021-04-22T11:24:17.429Z",
+    "owner": 9,
+    "genres": [
+      3,
+      6
+    ]
+  }
+}
+]

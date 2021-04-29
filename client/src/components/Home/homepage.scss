@@ -1,0 +1,60 @@
+
+
+.homepage-wrapper {
+  height: 90vh;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 67px;
+  padding: 120px 60px;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  z-index: 12;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+.hero-bold-text {
+  font-weight: 900;
+  // z-index: 12 !important;
+}
+
+#orange-dot {
+  color: #ff7f08;
+}
+
+.hero-text {
+  font-size: 18px;
+  width: 100%;
+  padding: 0 20%;
+  margin: 0 auto;
+}
+
+.particles-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  z-index: 6;
+}
+
+
+.home-button {
+  margin: 60px 0 0 0;
+  font-size: 32px;
+  color: #ff7f08;
+  transition: all 0.3s;
+}
+
+.home-button:hover {
+  color: #fff;
+}

@@ -1,0 +1,111 @@
+@use './../../styles/main.scss';
+
+.profile-page {
+  * {
+    // border: 1px dashed rgb(255, 0, 242);
+  }
+  background-color: black;
+  color: white;
+
+  .profile-top-section {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .profile-details {
+      min-width: 20vw;
+      background-color: rgba(66, 25, 1, 0.52);
+      
+      min-height: 10rem;
+      border-radius: 5px;
+      padding: 1rem;
+
+      h1 {
+        font-size: 30px;
+        text-align: left;
+      }
+
+      .edit-icon {
+        margin-top: 3rem;
+
+        width: 28px;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+
+    button {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .loops-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .profile-melody-sphere:hover {
+      // border:rgba(228, 220, 228, 0.411) 1px solid;
+      box-shadow: 0 0 10px #ffffff;
+    }
+    .profile-melody-sphere {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      // border:rgba(128, 0, 128, 0) 1px solid;
+      border-radius: 50%;
+      height: 250px;
+      width: 250px;
+      background: radial-gradient(circle at 100px 100px, #f3d2d2, #9b5e5e00);
+      box-shadow: 0 0 10px #ff7f08;
+
+      // background: radial-gradient(circle at 100px 100px, #e0e0e0, #ffffff00);
+      color: white;
+      margin: 0 auto;
+
+      // box-shadow: 0 0 10px #ff0000;
+      h1 {
+        padding-top: 2rem;
+        font-size: 30px;
+      }
+      h2 {
+        // font-family: VaporWave;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.loop-wrapper {
+  .main-profile-form {
+    z-index: 22;
+
+    button {
+      background-color: #ff7f08;
+
+      .box {
+        z-index: 22;
+        }
+    }
+  
+    
+}
+.particles-wrapper {
+  z-index: 12;
+}
+
+}
+
+.textarea {
+  font-family: MyFont;
+}
+
+// * {border: 1px solid rgb(255, 0, 242);}
+.profile-bottom-section{
+  padding:1rem;
+}

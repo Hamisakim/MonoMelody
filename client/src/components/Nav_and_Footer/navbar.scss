@@ -1,0 +1,144 @@
+$background-color: #252525;
+// $brand-color: #8929d8;
+// $brand-color: #F9CE20;
+$brand-color: #ff7f08dc;
+.navbar-menu {
+  background-color: #000 !important; //!!!!
+}
+
+.is-active {
+  border-top: $brand-color 1px solid;
+}
+
+a:hover {
+  color: $brand-color;
+  text-decoration: none;
+}
+.navbar {
+  // height: 75px ; //!! causes gap
+  z-index: 1500;
+
+  background-color: black  !important; //!!!
+  border-bottom: 1px solid #000;
+  box-shadow: 0px 0px 15px #cecece69;
+  // position: fixed;
+  width: 100vw;
+  height: 80px;
+
+  .second-logo-color {
+    fill: $brand-color;
+  }
+
+  .navbar-item {
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    position: relative;
+    top: 12px;
+  }
+
+  .navbar-item:focus {
+    color: $brand-color;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .navbar-item:hover {
+    color: $brand-color;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .navbar-brand{
+    .navbar-logo-link {
+      display: flex;
+      justify-content: center;
+      margin: 0 20px 0 10px;
+   
+  }
+  }
+
+  // .container {
+  //   width: 100%;
+  // }
+
+  .second-logo {
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .navbar-burger {
+    height: 85px;
+    width: 80px;
+    transform: scale(1.5);
+    color: white;
+  }
+
+  .navbar-burger:hover {
+    -color: $brand-color;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+}
+
+// .footer-content {
+//   margin: 65px 0 0 0;
+// }
+
+
+.footer-content{ 
+  width: 100vw;
+  // height: 10vh !important;;
+  // z-index: 10;
+
+    width: 100vw;
+    height: 20vh !important;
+    // z-index: 10;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $brand-color;
+  background-color: black;  
+  // box-shadow: 0px 0px 15px #cecece69;
+
+  .footer-link{margin-right: 1rem;
+    color: rgb(121, 121, 121);
+  }
+  .footer-link:hover{
+    color:#ff7f08;
+  }
+}
+
+.footer-link {
+  color: white;
+}
+@media screen and (min-width: 1024px){
+  .is-active {
+    border-top: #000000dc 1px solid;
+}
+
+
+}

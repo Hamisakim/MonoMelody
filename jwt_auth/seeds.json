@@ -1,0 +1,128 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$XaIUPDMec1MnlbYsyfIdhF$eOhS2BG1rKDneHalqmm6lMTDpsIlDjDA+JGZISZf/wc=",
+    "last_login": "2021-04-19T14:55:17.168Z",
+    "is_superuser": true,
+    "is_staff": true,
+    "is_active": true,
+    "username": "admin",
+    "email": "admin@",
+    "first_name": null,
+    "last_name": null,
+    "profile_image": null,
+    "location": null,
+    "bio": null,
+    "date_joined": "2021-04-19T14:54:56.937Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "username": "Terry",
+    "email": "terry@terry",
+    "first_name": "terry",
+    "last_name": "Crews",
+    "profile_image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVEhYYGRgYGBgYGBgYGBgYGhgYGBgaGRgZGBgcIS4lHB4rIRoYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHBISGjQhJCE2NDQ0NDQ0NDQ2NDQxNDQ0NDQ0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAQEAxAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EAEEQA",
+    "location": "LA",
+    "bio": "I miss you. DUNANAHNAHNAHNAHNAH I need you",
+    "date_joined": "2021-04-19T14:57:13.051Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "username": "technoking",
+    "email": "elon@tesla.com",
+    "first_name": "Elon",
+    "last_name": "Musk",
+    "profile_image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhUQEBIVFRUVFRUVFRUVFRUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQFS0dHh0tKy0tLS0rKystKy0tLSstKy0tLSstLS0tLS0rLS0rLS0tKy0tLSstLS0tLS0tLS0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAACAwABBAYFBwj/xAA8E",
+    "location": "Texas",
+    "bio": "DOGE",
+    "date_joined": "2021-04-19T14:58:04.227Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "username": "Gloria",
+    "email": "g@g.com",
+    "first_name": "Gloria",
+    "last_name": "Pritchett",
+    "profile_image": "https://openpsychometrics.org/tests/characters/test-resources/pics/MF/2.jpg",
+    "location": "LA",
+    "bio": "MANNY JAAAAAY in my village in CoLUMBIA we didn't have synths",
+    "date_joined": "2021-04-19T14:59:55.895Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "username": "batman",
+    "email": "Batman@batman.com",
+    "first_name": "Batman",
+    "last_name": "Batman",
+    "profile_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMi3c6fSV3X-ob92nSo_mk7fD-eEvmQcnmA&usqp=CAU",
+    "location": "batcave",
+    "bio": "I'm Batman.",
+    "date_joined": "2021-04-19T15:01:03.091Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "Bruce Wayne",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "username": "brucewayne",
+    "email": "bruce@bruceenterprise.",
+    "first_name": "Bruce",
+    "last_name": "Wayne",
+    "profile_image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/19/Bruce_Wayne_%28The_Dark_Knight_Trilogy%29.jpg/220px-Bruce_Wayne_%28The_Dark_Knight_Trilogy%29.jpg",
+    "location": "Gotham",
+    "bio": "not batman",
+    "date_joined": "2021-04-19T15:01:53.422Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

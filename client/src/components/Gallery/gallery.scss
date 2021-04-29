@@ -1,0 +1,60 @@
+// @use '../../styles/main.scss';
+
+
+.gallery{
+  background-color: #000000;
+  z-index: 1500;
+  padding-top: 2rem;
+}
+.gallery-wrapper{
+  z-index: 1500;
+
+  .container{
+    text-align: center;
+    button{
+      color: #ff7f08;
+      text-align: center;
+      color: white;
+      background-color: transparent;  
+      // width: 150px;
+      border-radius: 20px;
+      // font-size: 2.1rem ;
+      font-family: MyFont;
+  
+      margin:0.5rem;
+      outline: none;
+    }
+  }
+}
+.gallery-filter{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  .genre-tag-button:hover{
+    box-shadow: 0 0 10px #0037ff;   
+  }
+  .genre-tag-button{
+    text-align: center;
+    color: white;
+    background-color:blue;  
+    width: 150px;
+    border-radius: 20px;
+    font-family: VaporWave;
+    font-size: 2.1rem ;
+
+    margin:0.5rem;
+    outline: none;
+  }
+
+}
+
+.sphere-display {
+  padding-top: 2rem;
+  height: 100%;
+  outline: none;  
+  margin-bottom: 2rem;  
+}
+.column{
+  text-align: center;
+}

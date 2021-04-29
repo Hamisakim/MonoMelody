@@ -1,0 +1,50 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-particles-js": "^3.4.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.0",
+    "react-ticker": "^1.2.2",
+    "react-toastify": "^7.0.3",
+    "react-typing-animation": "^1.6.2",
+    "reactronica": "^0.4.6",
+    "sass": "^1.32.8",
+    "toastify": "^2.0.1",
+    "tone": "^14.7.77"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "react-scripts start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+      "jsx-a11y"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
