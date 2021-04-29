@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './sphere.scss'
 import Ticker from 'react-ticker'
-import LikeButton from '../LikeButton/LikeButton'
+import LikeButton from '../likebutton/LikeButton'
 
 
 const MelodySphere = (props) => {

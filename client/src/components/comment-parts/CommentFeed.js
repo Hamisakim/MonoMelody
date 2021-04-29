@@ -17,7 +17,7 @@ const CommentFeed = ({ id }) => {
   }, [])
 
   const getComments = async () =>{ 
-    const response = await axios.get(`/api/loops/${id}`) 
+    const response = await axios.get(`/api/loops/${id}/`) 
     const newCommentsArray = response.data.comments
     setCommentsArray(newCommentsArray)
   }

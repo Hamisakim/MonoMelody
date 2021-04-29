@@ -278,7 +278,7 @@ const LoopNew = () => {
     }
 
     const getGenres = async() => {
-      const response = await axios.get('/api/genres')
+      const response = await axios.get('/api/genres/')
       setGenresDb(response.data)
     }
     getGenres()

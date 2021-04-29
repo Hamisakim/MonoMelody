@@ -2,22 +2,22 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Gallery from './components/Gallery/Gallery'
+import Gallery from './components/gallery/Gallery'
 import HomePage from './components/Home/HomePage'
-import Login from './components/LoginRegister/Login'
-import Register from './components/LoginRegister/Register'
-import Footer from './components/Nav_and_Footer/Footer'
-import NavBar from './components/Nav_and_Footer/NavBar'
+import Login from './components/login-register/Login'
+import Register from './components/login-register/Register'
+import Footer from './components/nav_and_footer/Footer'
+import NavBar from './components/nav_and_footer/NavBar'
 import Sequencer from './components/sequencer/Sequencer'
-import LoopEdit from './components/Loops/LoopEdit'
-import LoopNew from './components/Loops/LoopNew'
-import LoopShow from './components/Loops/LoopShow'
-import ProfilePage from './components/Profile/ProfilePage'
+import LoopEdit from './components/loops/LoopEdit'
+import LoopNew from './components/loops/LoopNew'
+import LoopShow from './components/loops/LoopShow'
+import ProfilePage from './components/profile/ProfilePage'
 import About from './components/About/About'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import ProfileForm from './components/Profile/ProfileForm'
+import ProfileForm from './components/profile/ProfileForm'
 
 const App = () => {
 
