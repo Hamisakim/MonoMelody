@@ -1,7 +1,7 @@
 # MonoMelody.readme
 ### Team members
-Sami Hakim 
-Eric Petso
+* [Sami Hakim](https://github.com/hamisakim)
+* [Eric Petsopoulos](https://github.com/ericpesto)
 # - Project overview 7-days
 *Note - no extra work has been done to this apart from deployment. This is to give an accurate representation of what can be accomplished in a set time frame.
 
