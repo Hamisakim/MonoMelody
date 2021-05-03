@@ -11,7 +11,7 @@ MonoMelody. is a music minded social media platform. Users can use  our bespoke 
 ## **Deployed app here [MonoMelody.](https://monomelody.herokuapp.com/)**
 Create an account and login to see the full features! 
 
-## Initialisation
+# Initialisation
 * Inside server directory Install back-end dependencies: `pipenv install --dev`
 * Enter Shell for project: `pipenv shell`
 * Make Migrations: `python3 manage.py makemigrations`
@@ -25,14 +25,14 @@ Create an account and login to see the full features!
 
 ![](/screengrabs/Screenshot%202021-04-29%20at%2022.04.10.png)
 
-## Project brief
+# Project brief
 * **Build a full-stack application** by making your own backend and your own front-end
 * **Use a Python Django API** using Django REST Framework to serve your data from a Postgres database
 * **Consume your API with a separate front-end** built with React
 * **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
 * **Be deployed online** so it’s publicly accessible
 
-## Technologies used
+# Technologies used
 * Django 
 * Python
 * Django rest framework
@@ -53,7 +53,7 @@ Create an account and login to see the full features!
 * Slack
 * Zoom
 
-## Approach Taken
+# Approach Taken
 Eric and I worked together on a previous project and had good chemistry. So we decided to join forces. 
 We both wanted an app that was interactive, and both being keen music fans we had a direction.
 We used a basic wireframe to track our pages / componenets 
@@ -67,7 +67,7 @@ We started by making a very simple synth to ensure data would be storable and pl
 
 After confirming this works we began working on the backend.
 
-## Backend development
+# Backend development
 We pair-coded most of this together as this was the first time we’ve used Python for backend development. 
 The melodies are referred to as  Loops
 Loop Views.py
@@ -79,17 +79,17 @@ User Model
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.26.26.png)
 
 
-## Front end 
+# Front end 
 My focus was on the explore page, user authentication, nav-bar, footer, about page, likes, comments and  error handling. We used Bulma to aid in styling and to streamline the build. 
 
-## My Highlights 
-###  Notifications 
+# My Highlights 
+##  Notifications 
 Using Toastify I wrote a re-usable function which takes the error from our backend and displays a notification with relevant message. This really saved time by being reusable across multiple components! 
 We could also use the custom toastifyPopUp function to show a custom message if needed, for success or failure. 
 
 
 
-### Explore
+## Explore
 For the explore page we had the loops shown on the MelodySpheres, where the first genre is displayed and the whole list is shown via ticker. 
 
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.14.07.png)
@@ -97,29 +97,29 @@ For the explore page we had the loops shown on the MelodySpheres, where the firs
 Users may also filter and if a Loop contains any genre it will be shown!
 
 
-### User authentication, Login and Register
+## User authentication, Login and Register
 Upon successful registration the user will be logged in automatically to create a more pleasant UX. 
 
-### Like button
+## Like button
 Component can be placed placed anywhere using Loop id as prop.
 Checks if user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
 Will refresh counter at set interval and on like/unlike.
 
 
-## Wins and challenges 
-### Wins
+# Wins and challenges 
+## Wins
 * Implementing Django and Python.
 * Happy about the overall final product built within the timeframe.
 * Collaboration - always a blessing to work with likeminded indviduals and learn new things. 
-### Challenges
+## Challenges
 * Implementing Django and Python.
 * Using audio as the data was a challenge. In both creating and handling.
 
-## Key takeaways
+# Key takeaways
 * Python fundamentals. Chance to practice another language and framework. 
 *  Experience in implementing interactive user experiences.
 
-## Final product walkthrough	
+# Final product walkthrough	
 ![](/screengrabs/Screenshot%202021-04-30%20at%2016.01.44.png)
 
 Homepage
