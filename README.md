@@ -1,4 +1,4 @@
-# MonoMelody.readme (wip)
+# MonoMelody. Read Me
 ### Team members
 * [Sami Hakim](https://github.com/hamisakim)
 * [Eric Petsopoulos](https://github.com/ericpesto)
