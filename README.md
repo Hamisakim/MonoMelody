@@ -62,6 +62,7 @@ Scouring the web we found examples of drum machines and sequencers. We quickly b
 
 We struggled with this for a long time until we found an experimental project called Reactronica https://reactronica.com/
 We started by making a very simple synth to ensure data would be storable and playable.  
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2013.05.08.png)
 
 ![](/screengrabs/Screenshot%202021-04-30%20at%2013.03.12.png)
@@ -71,7 +72,9 @@ After confirming this works we began working on the backend.
 We pair-coded most of this together as this was the first time we’ve used Python for backend development. 
 The melodies are referred to as  Loops
 Loop Views.py
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2013.10.58.png)
+
 User Model
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.26.26.png)
 
@@ -86,6 +89,7 @@ We could also use the custom toastifyPopUp function to show a custom message if 
 
 Example in action! 
 Lines 372, 375, 376
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.01.11.png)
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.04.14.png)
 
