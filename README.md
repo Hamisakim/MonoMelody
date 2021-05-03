@@ -16,7 +16,7 @@ Create an account and login to see the full features!
 * Enter Shell for project: `pipenv shell`
 * Make Migrations: `python3 manage.py makemigrations`
 * Migrate: `python3 manage.py migrate`
-* * Load Seed data for Task Categories: `python3 manage.py loaddata jwt_auth/seeds.json`
+* Load Seed data for Task Categories: `python3 manage.py loaddata jwt_auth/seeds.json`
 * Seed Loops: `python3 manage.py loaddata loops/seeds.json`
 * Start back-end server: `python3 manage.py runserver`
 * **In client directory** 
