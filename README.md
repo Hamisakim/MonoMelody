@@ -2,7 +2,8 @@
 ### Team members
 * [Sami Hakim](https://github.com/hamisakim)
 * [Eric Petsopoulos](https://github.com/ericpesto)
-# - Project overview 7-days
+# Project overview
+#### Timeframe 7 days
 *Note - no extra work has been done to this apart from deployment. This is to give an accurate representation of what can be accomplished in a set time frame.
 
 MonoMelody. is a music minded social media platform. Users can use  our bespoke sequencer to craft your melodies and share them for others to enjoy! This is a full stack app and our first experience with Python and Django for server-side development. 
