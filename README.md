@@ -22,7 +22,7 @@ Create an account and login to see the full features!
 * Install front-end dependencies: `yarn`
 * Start front-end server: `yarn start`
 
-![](Screenshot%202021-04-29%20at%2022.04.10.png)
+![init](Screenshot%202021-04-29%20at%2022.04.10.png)
 
 ## Project brief
 * **Build a full-stack application** by making your own backend and your own front-end
