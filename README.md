@@ -56,6 +56,7 @@ Create an account and login to see the full features!
 Eric and I worked together on a previous project and had good chemistry. So we decided to join forces. 
 We both wanted an app that was interactive, and both being keen music fans we had a direction.
 We used a basic wireframe to track our pages / componenets 
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.03.04.png)
 
 Scouring the web we found examples of drum machines and sequencers. We quickly began trying to get a proof of concept and a way to save the music in a way that can handled by our backend.
@@ -76,6 +77,7 @@ Loop Views.py
 ![](/screengrabs/Screenshot%202021-04-30%20at%2013.10.58.png)
 
 User Model
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.26.26.png)
 
 
