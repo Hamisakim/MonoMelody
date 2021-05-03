@@ -65,9 +65,6 @@ Scouring the web we found examples of drum machines and sequencers. We quickly b
 We struggled with this for a long time until we found an experimental project called Reactronica https://reactronica.com/
 We started by making a very simple synth to ensure data would be storable and playable.  
 
-![](/screengrabs/Screenshot%202021-04-30%20at%2013.05.08.png)
-
-![](/screengrabs/Screenshot%202021-04-30%20at%2013.03.12.png)
 After confirming this works we began working on the backend.
 
 ## Backend development
@@ -85,13 +82,11 @@ User Model
 ## Front end 
 My focus was on the explore page, user authentication, nav-bar, footer, about page, likes, comments and  error handling. We used Bulma to aid in styling and to streamline the build. 
 
-## MY Highlights 
+## My Highlights 
 ###  Notifications 
 Using Toastify I wrote a re-usable function which takes the error from our backend and displays a notification with relevant message. This really saved time by being reusable across multiple components! 
 We could also use the custom toastifyPopUp function to show a custom message if needed, for success or failure. 
 
-![](/screengrabs/Screenshot%202021-04-30%20at%2014.57.08.png)
-![](/screengrabs/Screenshot%202021-04-30%20at%2015.16.49.png)
 
 
 ### Explore
@@ -105,7 +100,6 @@ Users may also filter and if a Loop contains any genre it will be shown!
 ### User authentication, Login and Register
 Upon successful registration the user will be logged in automatically to create a more pleasant UX. 
 
-![](/screengrabs/Screenshot%202021-04-30%20at%2015.21.24.png)
 ### Like button
 Component can be placed placed anywhere using Loop id as prop.
 Checks if user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
