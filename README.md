@@ -105,11 +105,24 @@ Component can be placed placed anywhere using Loop id as prop.
 Checks if user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
 Will refresh counter at set interval and on like/unlike.
 
+
+## Wins and challenges 
+### Wins
+	* Implementing Django and Python.
+	* Happy about the overall final product built within the timeframe.
+	* Collaboration - always a blessing to work with likeminded indviduals and learn new things. 
+### Challenges
+	* Implementing Django and Python.
+	* Using audio as the data was a challenge. In both creating and handling.
+
+## Key takeaways
+	* Python fundamentals. Chance to practice another language and framework. 
+	*  Experience in implementing interactive user experiences.
+
+
 ## Final product walkthrough	
 ![](/screengrabs/Screenshot%202021-04-30%20at%2016.01.44.png)
 
-
-Final product walkthrough	
 Homepage
 ![](Screenshot%202021-04-30%20at%2016.01.44.png)![Screenshot 2021-04-30 at 16 01 44](https://user-images.githubusercontent.com/76621344/116895751-6dc30280-ac2b-11eb-90f8-b369216ba04c.png)
 
