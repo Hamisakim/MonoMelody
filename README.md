@@ -87,6 +87,7 @@ My focus was on the explore page, user authentication, nav-bar, footer, about pa
 ## Highlights 
 Using Toastify I wrote a re-usable function which takes the error from our backend and displays a notification with relevant message. This really saved time by being reusable across multiple components! 
 We could also use the custom toastifyPopUp function to show a custom message if needed, for success or failure. 
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.57.08.png)
 
 Example in action! 
@@ -97,18 +98,23 @@ Lines 372, 375, 376
 
 ### Explore
 For the explore page we had the loops shown on the MelodySpheres, where the first genre is displayed and the whole list is shown via ticker. 
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.14.07.png)
+
 Users may also filter and if a Loop contains any genre it will be shown!
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.16.49.png)
 
 ### User authentication, Login and Register
 Upon successful registration the user will be logged in automatically to create a more pleasant UX. 
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.21.24.png)
 
 ### Like button
 Component can be placed placed anywhere using Loop id as prop.
 Checks if user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
 Will refresh counter at set interval and on like/unlike.
+
 ![](/screengrabs/Screenshot%202021-04-30%20at%2016.07.30.png)
 
 ## Final product walkthrough	
