@@ -108,17 +108,16 @@ Will refresh counter at set interval and on like/unlike.
 
 ## Wins and challenges 
 ### Wins
-	* Implementing Django and Python.
-	* Happy about the overall final product built within the timeframe.
-	* Collaboration - always a blessing to work with likeminded indviduals and learn new things. 
+* Implementing Django and Python.
+* Happy about the overall final product built within the timeframe.
+* Collaboration - always a blessing to work with likeminded indviduals and learn new things. 
 ### Challenges
-	* Implementing Django and Python.
-	* Using audio as the data was a challenge. In both creating and handling.
+* Implementing Django and Python.
+* Using audio as the data was a challenge. In both creating and handling.
 
 ## Key takeaways
-	* Python fundamentals. Chance to practice another language and framework. 
-	*  Experience in implementing interactive user experiences.
-
+* Python fundamentals. Chance to practice another language and framework. 
+*  Experience in implementing interactive user experiences.
 
 ## Final product walkthrough	
 ![](/screengrabs/Screenshot%202021-04-30%20at%2016.01.44.png)
