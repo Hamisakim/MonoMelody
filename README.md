@@ -66,6 +66,7 @@ We struggled with this for a long time until we found an experimental project ca
 We started by making a very simple synth to ensure data would be storable and playable.  
 
 After confirming this works we began working on the backend.
+![Screenshot_2021-04-17 GA-LDN React Template(4)](https://user-images.githubusercontent.com/76621344/117569295-f1ae3c00-b0bc-11eb-9453-01928911cdc1.png)
 
 # Backend development
 We pair-coded most of this together as this was the first time we’ve used Python for backend development. 
