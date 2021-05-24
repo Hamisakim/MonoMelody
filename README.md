@@ -327,7 +327,39 @@ and in the JSX
 
 ## User authentication, log in and Register
 Upon successful registration, the user will be logged in automatically to create a more pleasant UX. 
-![Screenshot 2021-04-30 at 15 21 24](https://user-images.githubusercontent.com/76621344/119320779-d7a35a80-bc73-11eb-9433-5fc3f6dbaf44.png)
+```javascript
+const handleSubmit = async (event) => {
+    event.preventDefault()
+    let wasSignupSuccess = null
+    try {
+      const dataToSend = formData
+      const response =  await axios.post('api/auth/register/', dataToSend)
+      console.log('🟢 ~ file: register.js ~ line 44 ~ response', response)
+      wasSignupSuccess = true
+      signupPopup(true,'Sign up success')
+    } catch (err) {
+      setErrors(err.response.data)
+      getErrorsToastify(err)
+      wasSignupSuccess = false
+      signupPopup(false,'Sign up failed')
+    }
+    if (wasSignupSuccess){
+      const loginData = {
+        username: formData.username,
+        password: formData.password,
+      }
+      try {
+        const response = await axios.post('/api/auth/login/', loginData)
+        loginPopUp(true)
+        window.localStorage.setItem('token',response.data.token)
+        history.push('/create')
+      } catch (err) {
+        loginPopUp(false)
+        getErrorsToastify(err)
+      }
+    }
+  }
+```
 
 ## Like button
 The component can be placed anywhere using Loop id as a prop.
@@ -335,7 +367,7 @@ On first render the component will check if the user has liked before and render
 The component will refresh  at a set interval and on like/unlike.
 ![Screenshot 2021-04-30 at 16 07 30](https://user-images.githubusercontent.com/76621344/119320798-dd00a500-bc73-11eb-8e1a-5c5ab6991602.png)
 
-```
+```javascript
 const checkIfLiked = (likesArr) => {
     const areThereLikes = likesArr[0]
     if (!areThereLikes){ 
