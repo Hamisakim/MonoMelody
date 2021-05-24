@@ -331,10 +331,64 @@ Upon successful registration, the user will be logged in automatically to create
 
 ## Like button
 The component can be placed anywhere using Loop id as a prop.
-Checks if the user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
-Will refresh counter at a set interval and on like/unlike.
+On first render the component will check if the user has liked before and renders option to like/unlike accordingly. Unliking will send a delete request and liking sends a post request. 
+The component will refresh  at a set interval and on like/unlike.
 ![Screenshot 2021-04-30 at 16 07 30](https://user-images.githubusercontent.com/76621344/119320798-dd00a500-bc73-11eb-8e1a-5c5ab6991602.png)
 
+```
+const checkIfLiked = (likesArr) => {
+    const areThereLikes = likesArr[0]
+    if (!areThereLikes){ 
+      setUserLikedAlready(false) 
+      return null
+    }
+    const payload = getPayloadFromToken()
+    const ownerId = payload.sub
+    
+    likesArr.map(like=>{
+      if (like.owner.id === ownerId){
+        setUserLikedAlready(true)
+        setLikeId(like.id)
+      } else if (like.owner.id !== ownerId){
+        setUserLikedAlready(false)
+      }
+    })
+  } 
+  //__________________________________________________________________________
+
+  const handleLike = async () => {
+    const token = getTokenFromLocalStorage()
+    if (!userIsAuthenticated()){
+      userNeedsToLogin('Please login to like!')
+      return null
+    }
+
+    if (userLikedAlready){
+      //* If user has liked do delete
+      try {   
+        await axios.delete(`/api/like/${likeId}/`, { headers: { Authorization: `Bearer ${token}` } } ) 
+        setUserLikedAlready(true)
+        refreshFavourites()
+      } catch (err) {
+        getErrorsToastify(err)
+      }
+    } else if (!userLikedAlready){
+      //* If user hasn't liked do post request
+      try {   
+        const likeLoadToSend = {
+          owner: ownerId,
+          loop: id,
+        }
+        await axios.post(`/api/like/${id}/`, likeLoadToSend, { headers: { Authorization: `Bearer ${token}` } } ) 
+        refreshFavourites()
+
+      } catch (err) {
+        getErrorsToastify(err)
+      }
+      
+    }
+  }
+```
 
 # Wins and challenges 
 ## Wins
