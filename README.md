@@ -204,7 +204,7 @@ export const toastifyPopUp = (success = true,message = 'Success!') =>{
 
 ```
 
-Example in action! Here we can see how this function is used for both succesful and failed saves of the Loop in the 
+Example in action! Here we can see how this function is used for both succesful and failed saves of the Loop in the front end.
 ```javascript
 const handleSave =  async () => {
     const stringSteps = steps.join(' ')
