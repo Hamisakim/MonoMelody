@@ -365,7 +365,7 @@ const handleSubmit = async (event) => {
 The component can be placed anywhere using Loop id as a prop.
 On first render the component will check if the user has liked before and renders option to like/unlike accordingly. Unliking will send a delete request and liking sends a post request. 
 The component will refresh  at a set interval and on like/unlike.
-![Screenshot 2021-04-30 at 16 07 30](https://user-images.githubusercontent.com/76621344/119320798-dd00a500-bc73-11eb-8e1a-5c5ab6991602.png)
+
 
 ```javascript
 const checkIfLiked = (likesArr) => {
