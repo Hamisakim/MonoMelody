@@ -70,9 +70,38 @@ After confirming this works we began working on the backend.
 
 # Backend development
 We pair-coded most of this together as this was the first time we’ve used Python for backend development. 
-The melodies are referred to as  Loops
-Loop Views.py
+The melodies are referred to as Loops in our backend 
+Here we can see the Loop model.
 
+```python
+
+class Loop(models.Model):
+    title = models.CharField(max_length=50, null=True, unique=True) #//! change to required 
+    steps = models.CharField(max_length=2000000)
+    bpm = models.IntegerField(default=120)
+    synth = models.CharField(max_length=50, default="fmSynth")
+    key = models.CharField(max_length=10, default="c")
+    scale = models.CharField(max_length=50, default="major")
+    effect = models.CharField(max_length=500, default="freeverb")
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    owner = models.ForeignKey(
+        'jwt_auth.User',
+        # related_name='created_loops',
+        related_name='loops_created',
+        on_delete = models.CASCADE
+    ) 
+    genres = models.ManyToManyField('genres.Genre', related_name="loops")
+
+    # comments
+    # likes 
+
+    def __str__(self):
+        return f"{self.title} by {self.owner}"
+
+```
+
+
+Here we can see how each request route is handled. 
 ![](/screengrabs/Screenshot%202021-04-30%20at%2013.10.58.png)
 
 User Model
