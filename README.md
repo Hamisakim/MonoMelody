@@ -87,6 +87,11 @@ My focus was on the explore page, user authentication, nav-bar, footer, about pa
 ##  Notifications 
 Using Toastify I wrote a re-usable function which takes the error from our backend and displays a notification with relevant message. This really saved time by being reusable across multiple components! 
 We could also use the custom toastifyPopUp function to show a custom message if needed, for success or failure. 
+![Screenshot 2021-04-30 at 14 57 08](https://user-images.githubusercontent.com/76621344/119320712-c65a4e00-bc73-11eb-837b-7c8e205295c6.png)
+
+Example in action! 
+Lines 372, 375, 376![Screenshot 2021-04-30 at 15 01 11](https://user-images.githubusercontent.com/76621344/119320727-cb1f0200-bc73-11eb-8297-8b6de9283b6a.png)
+![Screenshot 2021-04-30 at 15 04 14](https://user-images.githubusercontent.com/76621344/119320745-ce19f280-bc73-11eb-952b-e7cef59d90b9.png)
 
 
 
@@ -100,11 +105,13 @@ Users may also filter and if a Loop contains any genre it will be shown!
 
 ## User authentication, Login and Register
 Upon successful registration the user will be logged in automatically to create a more pleasant UX. 
+![Screenshot 2021-04-30 at 15 21 24](https://user-images.githubusercontent.com/76621344/119320779-d7a35a80-bc73-11eb-9433-5fc3f6dbaf44.png)
 
 ## Like button
 Component can be placed placed anywhere using Loop id as prop.
 Checks if user has liked before and renders option to like/unlike accordingly. Unliking will delete the like from the database.
 Will refresh counter at set interval and on like/unlike.
+![Screenshot 2021-04-30 at 16 07 30](https://user-images.githubusercontent.com/76621344/119320798-dd00a500-bc73-11eb-8e1a-5c5ab6991602.png)
 
 
 # Wins and challenges 
