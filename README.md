@@ -102,11 +102,58 @@ class Loop(models.Model):
 
 
 Here we can see how each request route is handled. 
-![](/screengrabs/Screenshot%202021-04-30%20at%2013.10.58.png)
+```python
+class LoopListView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+    def get(self, _request):
+        loops = Loop.objects.all() # return everything from the db
+        serialized_loops = PopulatedLoopSerializer(loops, many=True) # convert the data
+        return Response(serialized_loops.data, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        print('🟦 request post loop:', request.data)
+        request.data["owner"] = request.user.id
+        loop_to_add = LoopSerializer(data=request.data)
+        print('loop_to_add ->', loop_to_add)
+
+        if loop_to_add.is_valid():
+            loop_to_add.save()
+            print('🟩 loops-> view: Loop has saved',loop_to_add.data)
+            return Response(loop_to_add.data, status=status.HTTP_201_CREATED)
+        return Response(loop_to_add.errors, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
+class LoopDetailView(APIView):
+    def get_loop(self, pk):
+        try:
+            print('🚀 Loop Found')
+            return Loop.objects.get(pk=pk)
+        except Loop.DoesNotExist:
+            print("🆘 Cannot find that loop")
+            raise NotFound(detail="🆘 Cannot find that loop")  
+
+    def get(self, _request,pk):
+        loop = self.get_loop(pk=pk)
+        print('🟩 getting loop ->', loop)
+        serialized_loop = PopulatedLoopSerializer(loop)
+        return Response(serialized_loop.data, status=status.HTTP_200_OK)
+```
 
 User Model
 
-![](/screengrabs/Screenshot%202021-04-30%20at%2014.26.26.png)
+```python
+class User(AbstractUser):
+    username = models.CharField(max_length=50, unique=True)
+    email = models.CharField(max_length=50, unique=True)
+    first_name = models.CharField(max_length=50, null=True)
+    last_name = models.CharField(max_length=50, null=True)
+    profile_image = models.CharField(max_length=300, null=True)
+    location = models.CharField(max_length=300, null=True)
+    bio = models.TextField(max_length=600, blank=True, null=True)
+    date_joined = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return f"{self.username}"
+```
 
 
 
@@ -118,10 +165,60 @@ My focus was on the explore page, user authentication, nav-bar, footer, about pa
 ##  Notifications 
 Using Toastify I wrote a re-usable function that takes the error from our backend and displays a notification with a relevant message. This saved time by being reusable across multiple components! 
 We could also use the custom toastifyPopUp function to show a custom message if needed, for success or failure. 
-![Screenshot 2021-04-30 at 14 57 08](https://user-images.githubusercontent.com/76621344/119320712-c65a4e00-bc73-11eb-837b-7c8e205295c6.png)
+```javascript
+export const getErrorsToastify = (err) =>{
+  const message = Object.entries(err.response.data)
+  message.map(error=>{
+    const messageToSend = `Error with ${error[0]} - ${error[1].toString()}`
+    toastifyPopUp(false,messageToSend)
+    return null
+  })
+}
 
-Example in action! 
-Lines 372, 375, 376![Screenshot 2021-04-30 at 15 01 11](https://user-images.githubusercontent.com/76621344/119320727-cb1f0200-bc73-11eb-8297-8b6de9283b6a.png)
+export const toastifyPopUp = (success = true,message = 'Success!') =>{
+  console.log('🐝 ~ file: popUps.js ~ line 7 ~ ' )
+  if (success === true){
+    toast.success(message, {
+      position: 'top-right',
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      pauseOnFocusLoss: false,
+    })
+  } else if (success === false) {
+    toast.error(message, {
+      position: 'top-right',
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      pauseOnFocusLoss: false,
+    }) 
+  }
+}
+
+```
+
+Example in action! Here we can see how this function is used for both succesful and failed saves of the Loop in the 
+```javascript
+const handleSave =  async () => {
+    const stringSteps = steps.join(' ')
+    const formToSend = { ...formData, steps: stringSteps }
+    try {
+      await axios.post('/api/loops/', formToSend, { headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}`, 'Content-Type': 'application/json' } })
+      toastifyPopUp(true,'Save successful!')
+      history.push('/gallery')
+    } catch (err) {
+      toastifyPopUp(false,'Could not save!')
+      getErrorsToastify(err)
+    }
+  }
+```
 ![Screenshot 2021-04-30 at 15 04 14](https://user-images.githubusercontent.com/76621344/119320745-ce19f280-bc73-11eb-952b-e7cef59d90b9.png)
 
 
@@ -132,6 +229,100 @@ For the explore page we had the loops shown on the MelodySpheres, where the firs
 ![](/screengrabs/Screenshot%202021-04-30%20at%2015.14.07.png)
 
 Users may also filter and if a Loop contains any genre it will be shown!
+In order to do this we had to first get all genres used and map through these to create the buttons. 
+The user can toggle multiple genres in the filter. We used an array to capture these and loop through to find loops which contain any of these genres. 
+
+
+```javascript
+const Gallery = () => {
+  const [data, setData] = useState(null)
+  const [genres, setGenres] = useState(null)
+  const [genreFilter, setGenreFilter] = useState(null) //should be ids to check 
+  //____________________________________________________________________
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get('/api/loops/')
+      setData(response.data)
+    }
+    const getGenres = async () => {
+      const response = await axios.get('/api/genres/')
+      const dataArray = response.data
+      const arrayOfGenreNames = []
+      const arrayOfGenreId = []
+      dataArray.map(genre =>{
+        arrayOfGenreNames.push(genre.name)
+        arrayOfGenreId.push(genre.id)
+      })
+      setGenres(response.data)
+    }
+    getData()
+    getGenres()
+  },[])
+  //____________________________________________________________________
+  const handleGenreSelect = (event) => {
+    const genreId =  Number(event.target.value)
+    let genreArray = []
+    !genreFilter ? genreArray = [] :
+      genreArray = [...genreFilter]
+    const preventDuplicate = genreArray.findIndex(e => e === genreId)
+    if (preventDuplicate === -1){
+      genreArray.push(genreId)
+      setGenreFilter(genreArray)
+    } else {
+      genreArray.splice(preventDuplicate, 1)
+      setGenreFilter(genreArray)
+    }
+  }  
+  const handleFilterReset = () => {
+    setGenreFilter(null)
+  }
+```
+and in the JSX
+```javascript
+
+  <div className='gallery-filter'> 
+  
+            { 
+              genres.map(genre=>{ 
+                const selectedFilter = {
+                  backgroundColor: 'transparent',
+                  color: '#ff7f08',
+                  borderColor: '#ff7f08',
+                  zIndex: 100,
+
+                }
+                const notSelected = {
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  borderColor: 'white',
+                  zIndex: 100,
+              
+                }
+                let style = notSelected
+                //if genre.id is in the filter array then change color 
+                if (!genreFilter){
+                  style = notSelected
+                } else if (genreFilter.findIndex(e => e === genre.id) > -1 ){
+                  style = selectedFilter
+                }
+                return (
+                  <button
+                  // style={buttonBackground}
+                    className='genre-tag-button' 
+                    key={genre.id} 
+                    value={genre.id}
+                    style={style}
+                    onClick={() => {
+                      handleGenreSelect(event)
+                    }} 
+                  >
+                    {genre.name}
+                  </button>
+                )
+              })
+            }
+          </div>
+```
 
 
 ## User authentication, log in and Register
