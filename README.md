@@ -434,13 +434,12 @@ const checkIfLiked = (likesArr) => {
 # Key takeaways
 * Python fundamentals. Chance to practice another language and framework. 
 *  Experience in implementing interactive user experiences.
-
-# Final product walkthrough	
-![](/screengrabs/Screenshot%202021-04-30%20at%2016.01.44.png)
-
 # Bugs and future features
 * On initial load, the ticker on the explore page does not render correctly.
 * Need to add the delete option on the front end
+
+# Final product walkthrough	
+![](/screengrabs/Screenshot%202021-04-30%20at%2016.01.44.png)
 
 Homepage
 ![](Screenshot%202021-04-30%20at%2016.01.44.png)![Screenshot 2021-04-30 at 16 01 44](https://user-images.githubusercontent.com/76621344/116895751-6dc30280-ac2b-11eb-90f8-b369216ba04c.png)
