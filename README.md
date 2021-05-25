@@ -56,7 +56,7 @@ Create an account and log in to see the full features!
 # Approach Taken
 Eric and I worked together on a previous project and had good chemistry. So we decided to join forces. 
 We both wanted an interactive app, and both being keen music fans we had a direction.
-We used a basic wireframe to track our pages/components 
+We used a basic wireframe to track our pages/components.
 
 ![](/screengrabs/Screenshot%202021-04-30%20at%2014.03.04.png)
 
@@ -70,7 +70,7 @@ After confirming this works we began working on the backend.
 
 # Backend development
 We pair-coded most of this together as this was the first time we’ve used Python for backend development. 
-The melodies are referred to as Loops in our backend 
+The melodies are referred to as Loops in our backend.
 Here we can see the Loop model.
 
 ```python
